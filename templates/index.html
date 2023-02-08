@@ -7,7 +7,12 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <h1>This is the home page :)</h1>
-
+    <h1>Customer Orders</h1>
+    {% for order in orders %}
+        <p>
+            {{ order.customer_name }}, {{ order.order_date }}, {{ order.album_title }}, {{ order.artist_name }}, {{ order.quantity }}
+        </p>
+        <a href="/order/{{orders.index(order)}}">Show order</a>
+    {% endfor %}
 </body>
 </html>

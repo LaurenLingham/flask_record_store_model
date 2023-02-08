@@ -7,11 +7,10 @@
     <title>{{ title }}</title>
 </head>
 <body>
-    <h1>Customer Orders</h1>
-    {% for order in orders %}
+    <h1>Customer Order</h1>
         <p>
             {{ order.customer_name }}, {{ order.order_date }}, {{ order.album_title }}, {{ order.artist_name }}, {{ order.quantity }}
         </p>
-    {% endfor %}
+        <a href="/">Home</a>
 </body>
 </html>
